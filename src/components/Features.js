@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
-const FeatureGrid = ({ gridItems }) => (
-  <div className="columns is-multiline">
+const FeatureGrid = ({ gridItems }) => {
+ return <div className="columns is-multiline">
     {gridItems.map(item => (
       <div key={item.text} className="column is-6">
         <section className="section">
@@ -22,7 +22,7 @@ const FeatureGrid = ({ gridItems }) => (
       </div>
     ))}
   </div>
-)
+}
 
 FeatureGrid.propTypes = {
   gridItems: PropTypes.arrayOf(

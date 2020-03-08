@@ -1,9 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
+import Content, { HTMLContent } from "../components/Content";
 
-export const MyPageTemplate = ({
-  content
-}) => {
+export const MyPageTemplate = ({ content }) => {
   return (
     <div>
       <h1>My header</h1>
@@ -13,7 +11,7 @@ export const MyPageTemplate = ({
       </article>
     </div>
   );
-}
+};
 const MyPage = ({
   data: {
     markdownRemark: { frontmatter }
@@ -21,9 +19,7 @@ const MyPage = ({
 }) => {
   const { content } = frontmatter;
 
-  return (
-    <MyPageTemplate content={content} />
-  );
+  return <MyPageTemplate content={content}/>;
 };
 
 export default MyPage;
@@ -36,4 +32,4 @@ export const myPageQuery = graphql`
       }
     }
   }
-`
+`;
